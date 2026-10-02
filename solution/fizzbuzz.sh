@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+for ((i=1; i <= $1; i++)); do
+	if [ $(($i % 3)) -eq 0 ]; then
+		if [ $(($i%5)) -eq 0 ]; then
+			echo "Fizz Buzz";
+		fi
+		echo "Fizz";
+	elif [ $(($i%5)) -eq 0 ]; then
+		echo "Buzz";
+	else echo "$i";
+	fi
+done
