@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+h=0
+for i in "$@"; do
+	if [ $i == $1 ]; then
+		if [ $h == 0 ]; then
+			h+=1
+			continue
+		fi
+	fi
+	mv "$i" "$i$1"
+done
